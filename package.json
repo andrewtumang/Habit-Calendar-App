@@ -1,0 +1,29 @@
+{
+  "name": "HabitCalendarApp",
+  "version": "1.0.0",
+  "description": "Habit Calendar desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . HabitCalendarApp --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Habit Calendar App\"",
+    "package-linux": "electron-packager . HabitCalendarApp --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewtumang/Habit-Calendar-UI.git"
+  },
+  "author": "Andrew Tumang",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/andrewtumang/Habit-Calendar-UI/issues"
+  },
+  "homepage": "https://github.com/andrewtumang/Habit-Calendar-UI#readme",
+  "dependencies": {
+    "electron": "^8.1.1",
+    "electron-settings": "^3.2.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^14.2.1"
+  }
+}
